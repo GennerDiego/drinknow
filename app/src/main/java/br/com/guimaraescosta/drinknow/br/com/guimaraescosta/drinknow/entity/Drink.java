@@ -4,14 +4,14 @@ package br.com.guimaraescosta.drinknow.br.com.guimaraescosta.drinknow.entity;
  * Created by jguimara on 21/01/2018.
  */
 
-public class Drinks {
+public class Drink {
 
     private String name;
     private String description;
     private int quantity;
 
 
-    public Drinks(String nome, String descricao) {
+    public Drink(String nome, String descricao) {
         this.name = nome;
         this.description = descricao;
         //this.quantity = quantidade;

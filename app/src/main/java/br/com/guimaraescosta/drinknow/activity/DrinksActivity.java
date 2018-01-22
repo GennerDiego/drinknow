@@ -2,14 +2,18 @@ package br.com.guimaraescosta.drinknow.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import br.com.guimaraescosta.drinknow.br.com.guimaraescosta.drinknow.custom.CustomGrid;
-import br.com.guimaraescosta.drinknow.br.com.guimaraescosta.drinknow.entity.Drinks;
+import br.com.guimaraescosta.drinknow.br.com.guimaraescosta.drinknow.adapter.GenericAdapter;
+import br.com.guimaraescosta.drinknow.br.com.guimaraescosta.drinknow.entity.Drink;
 import br.com.guimaraescosta.drinknow.R;
 
 public class DrinksActivity extends AppCompatActivity {
@@ -18,17 +22,41 @@ public class DrinksActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drinks);
         ListView lista = findViewById(R.id.drinks_list);
-        List<Drinks> drinks = allDrinks();
-        CustomGrid adapter = new CustomGrid(drinks, this);
-        lista.setAdapter(adapter);
+        final List<Drink> drinks = allDrinks();
+
+        lista.setAdapter(new GenericAdapter<Drink>(getApplicationContext(), drinks) {
+            @Override
+            public View getMyView(int position, View convertView, ViewGroup parent, Drink drink) {
+                return viewDrink(parent, drink);
+            }
+        });
     }
 
-    private List<Drinks> allDrinks() {
+    private List<Drink> allDrinks() {
         return new ArrayList<>(Arrays.asList(
-                new Drinks("DAIKIRI", "Licor de cacau, conhaque e creme"),
-                new Drinks("Alice", "Blue curaçau e vodka"),
-                new Drinks("Lagoa Azul","blue curaçau e vodka" )));
-
-
+                new Drink("DAIKIRI", "Licor de cacau, conhaque e creme"),
+                new Drink("Alice", "Blue curaçau e vodka"),
+                new Drink("Lagoa Azul","blue curaçau e vodka" )));
     }
+
+    private View viewDrink(ViewGroup parent, Drink drink){
+
+        View view = getLayoutInflater().inflate(R.layout.activity_drinks, parent, false);
+        TextView nome = view.findViewById(R.id.drink_name);
+        TextView descricao = view.findViewById(R.id.drink_description);
+        ImageView imagem = view.findViewById(R.id.drink_image);
+
+        nome.setText(drink.getName());
+        descricao.setText(drink.getDescription());
+
+        imagem.setImageResource(R.drawable.sample_1);
+        imagem.setScaleType(ImageView.ScaleType.CENTER_CROP);
+
+        if(nome.getText().equals("DAIKIRI")) {
+            imagem.setImageResource(R.drawable.sample_0);
+        }
+
+        return view;
+    }
+
 }
