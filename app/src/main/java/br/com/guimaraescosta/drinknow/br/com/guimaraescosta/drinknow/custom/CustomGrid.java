@@ -1,9 +1,6 @@
-package br.com.guimaraescosta.drinknow;
+package br.com.guimaraescosta.drinknow.br.com.guimaraescosta.drinknow.custom;
 
 import android.app.Activity;
-import android.content.Context;
-import android.text.Layout;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -11,6 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
+
+import br.com.guimaraescosta.drinknow.R;
+import br.com.guimaraescosta.drinknow.br.com.guimaraescosta.drinknow.entity.Drinks;
 
 /**
  * Created by jguimara on 21/01/2018.

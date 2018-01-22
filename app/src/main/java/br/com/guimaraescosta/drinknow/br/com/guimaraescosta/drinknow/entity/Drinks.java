@@ -1,4 +1,4 @@
-package br.com.guimaraescosta.drinknow;
+package br.com.guimaraescosta.drinknow.br.com.guimaraescosta.drinknow.entity;
 
 /**
  * Created by jguimara on 21/01/2018.
