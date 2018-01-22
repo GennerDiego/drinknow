@@ -58,7 +58,7 @@ public class CustomGrid extends BaseAdapter{
         imagem.setImageResource(R.drawable.sample_1);
         imagem.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
-        if(nome.equals("DAIKIRI")) {
+        if(nome.getText().equals("DAIKIRI")) {
             imagem.setImageResource(R.drawable.sample_0);
         }
 
