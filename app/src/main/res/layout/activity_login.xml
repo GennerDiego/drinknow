@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="384dp"
+        android:layout_height="567dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="267dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite seu nome"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="@android:color/background_light"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="334dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="267dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite o código do evento"
+        android:inputType="textPassword"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="@android:color/background_light"
+        android:textColorLink="@android:color/background_light"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="380dp" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="194dp"
+        android:layout_height="35dp"
+        android:background="@drawable/login_button"
+        android:text="Button"
+        android:textColor="@android:color/background_light"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="482dp" />
+</android.support.constraint.ConstraintLayout>
