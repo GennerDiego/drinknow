@@ -70,16 +70,16 @@ public class LoginActivity extends AppCompatActivity {
                 text.setTextSize(18);
                 Toast toast = new Toast(getApplicationContext());
                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-                toast.setDuration(Toast.LENGTH_LONG);
+                toast.setDuration(Toast.LENGTH_SHORT);
                 toast.setView(layout);
 
                 if (TextUtils.isEmpty(editText1.getText().toString())) {
                     // Set the Text to show in TextView
-                    text.setText("Preencha o seu nome para continuar");
+                    text.setText(" Preencha o seu nome para continuar ");
                     toast.show();
 
                 } else if (TextUtils.isEmpty(editText2.getText().toString())) {
-                    text.setText("Preencha o código do evento para continuar");
+                    text.setText(" Preencha o código do evento para continuar ");
                     toast.show();
 
                 } else {
