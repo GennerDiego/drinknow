@@ -23,10 +23,15 @@ public class DrinksActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drinks);
 
-
+        //Fixed event image
         ImageView event_image = findViewById(R.id.event_image);
-
         event_image.setImageResource(R.drawable.marriage);
+
+       // Fixed event name
+        TextView event_name = findViewById(R.id.event_name);
+        event_name.setText("Danilo e Letícia");
+
+
 
         ListView lista = findViewById(R.id.drinks_list);
         final List<Drink> drinks = allDrinks();
