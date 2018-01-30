@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -21,8 +22,16 @@ public class DrinksActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drinks);
+
+
+        ImageView event_image = findViewById(R.id.event_image);
+
+        event_image.setImageResource(R.drawable.marriage);
+
         ListView lista = findViewById(R.id.drinks_list);
         final List<Drink> drinks = allDrinks();
+
+
 
         lista.setAdapter(new GenericAdapter<Drink>(getApplicationContext(), drinks) {
             @Override
@@ -36,7 +45,10 @@ public class DrinksActivity extends AppCompatActivity {
         return new ArrayList<>(Arrays.asList(
                 new Drink("DAIKIRI", "Licor de cacau, conhaque e creme"),
                 new Drink("Alice", "Blue curaçau e vodka"),
-                new Drink("Lagoa Azul","blue curaçau e vodka" )));
+                new Drink("Lagoa Azul","blue curaçau e vodka"),
+                new Drink("Lagoa Azul","blue curaçau e vodka"),
+                new Drink("Lagoa Azul","blue curaçau e vodka"),
+                new Drink("Lagoa Azul","blue curaçau e vodka")));
     }
 
     private View viewDrink(ViewGroup parent, Drink drink){
@@ -45,6 +57,8 @@ public class DrinksActivity extends AppCompatActivity {
         TextView nome = view.findViewById(R.id.drink_name);
         TextView descricao = view.findViewById(R.id.drink_description);
         ImageView imagem = view.findViewById(R.id.drink_image);
+
+
 
         nome.setText(drink.getName());
         descricao.setText(drink.getDescription());

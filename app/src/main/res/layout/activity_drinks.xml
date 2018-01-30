@@ -1,49 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.guimaraescosta.drinknow.activity.DrinksActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="br.com.guimaraescosta.drinknow.activity.DrinksActivity">
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:columnWidth="90dp"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"
-        android:stretchMode="columnWidth"
-        android:gravity="center"
-        android:id="@+id/drinks-list" />
 
-    <ImageView
-        android:id="@+id/drink_image"
-        android:layout_width="100dp"
-        android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/event_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 
-    <LinearLayout
+
+    <LinearLayout android:id="@+id/linearImageDrink"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:padding="3dip" >
+
+        <ImageView
+            android:id="@+id/drink_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
 
         <TextView
             android:id="@+id/drink_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name"
-            android:textSize="30dp" />
+            android:layout_alignTop="@+id/linearImageDrink"
+            android:layout_toRightOf="@+id/linearImageDrink"
+            android:textSize="30dp"/>
 
         <TextView
             android:id="@+id/drink_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/linearImageDrink"
+            android:layout_alignBottom="@+id/linearImageDrink"
+            android:textSize="20dp"/>
+
+        <ListView
+            android:id="@+id/drinks-list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description"
-            android:textSize="20dp" />
+            android:layout_below="@+id/event_image"
+            />
 
-    </LinearLayout>
-
-
-
-</LinearLayout>
+</RelativeLayout>
