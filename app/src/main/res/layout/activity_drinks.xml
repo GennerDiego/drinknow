@@ -7,6 +7,11 @@
     android:orientation="vertical"
     tools:context="br.com.guimaraescosta.drinknow.activity.DrinksActivity">
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignTop="@id/event_image"/>
+
     <ImageView
         android:id="@+id/event_image"
         android:layout_width="match_parent"
@@ -19,58 +24,28 @@
         android:id="@+id/event_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/event_image"
         android:layout_alignParentBottom="false"
-        android:layout_marginRight="5dp"
+        android:layout_alignTop="@+id/event_image"
         android:elegantTextHeight="true"
-        android:fontFamily="@font/strawberry_blossom"
-        android:textAlignment="viewEnd"
+        android:fontFamily="@font/shorelines_script_bold"
+        android:gravity="center"
+        android:paddingRight="2dp"
+        android:textAlignment="center"
         android:textColor="@android:color/background_dark"
-        android:textSize="50sp"
-        android:paddingRight="2dp"/>
+        android:textSize="25sp" />
 
-
-
-    <LinearLayout android:id="@+id/linearImageDrink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:padding="2dp">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/drink_image"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:padding="2dp"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#000"
-
-           />
-
-
-    </LinearLayout>
-
-    <TextView
-            android:id="@+id/drink_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/linearImageDrink"
-            android:layout_toLeftOf="@+id/linearImageDrink"
-            android:textSize="18sp"/>
-
-    <TextView
-            android:id="@+id/drink_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/linearImageDrink"
-            android:layout_toLeftOf="@+id/linearImageDrink"
-      android:layout_alignParentLeft="true"
-            android:textSize="20sp"/>
 
     <ListView
         android:id="@+id/drinks-list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/event_image" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/event_image"
+        android:choiceMode="multipleChoice"
+        android:divider="@android:drawable/divider_horizontal_textfield"
+        />
+
+
+
+
 
 </RelativeLayout>

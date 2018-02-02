@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 
 import java.util.List;
@@ -13,13 +14,14 @@ import java.util.List;
  * Created by genner.almeida on 21/01/18.
  */
 
-public abstract class GenericAdapter<T> extends BaseAdapter {
+public abstract class GenericAdapter<T> extends ArrayAdapter {
 
     LayoutInflater layoutInflater;
     Context context;
     private List<T> tList;
 
-    public GenericAdapter(Context context, List<T> tList) {
+    public GenericAdapter(Context context, int resource, List<T> tList) {
+        super(context, resource, tList);
         this.context = context;
         this.tList = tList;
         layoutInflater = LayoutInflater.from(context);
