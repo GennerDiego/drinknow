@@ -10,6 +10,21 @@ public class Drink {
     private String description;
     private int quantity;
 
+    public Boolean getSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(Boolean isSelected) {
+        this.isSelected = isSelected;
+
+    }
+
+    public boolean isSelected(){
+        return isSelected;
+    }
+
+    private Boolean isSelected = false;
+
 
     public Drink(String nome, String descricao) {
         this.name = nome;

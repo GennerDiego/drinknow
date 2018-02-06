@@ -7,32 +7,32 @@
     android:orientation="vertical"
     tools:context="br.com.guimaraescosta.drinknow.activity.DrinksActivity">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_alignTop="@id/event_image"/>
 
     <ImageView
         android:id="@+id/event_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="50dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/event_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="false"
-        android:layout_alignTop="@+id/event_image"
-        android:elegantTextHeight="true"
+        android:layout_height="50dp"
+       android:layout_alignParentTop="true"
+        android:autoSizeMinTextSize="20sp"
         android:fontFamily="@font/shorelines_script_bold"
         android:gravity="center"
-        android:paddingRight="2dp"
+        android:autoSizeTextType="uniform"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
-        android:textSize="25sp" />
+
+        />
+
+    <!--android:layout_alignParentBottom="false"-->
+    <!--android:layout_alignTop="@+id/event_image"-->
 
 
     <ListView
