@@ -53,6 +53,7 @@ public class DrinksActivity extends AppCompatActivity implements CompoundButton.
         lista.addHeaderView(header);
 
 
+
         adapterT = new AdapterTest(this, android.R.layout.simple_list_item_multiple_choice, drinks);
         lista.setAdapter(adapterT);
 
@@ -72,7 +73,7 @@ public class DrinksActivity extends AppCompatActivity implements CompoundButton.
 
     private List<Drink> allDrinks() {
         return new ArrayList<>(Arrays.asList(
-                new Drink("Daikiri", "Licor de cacau, conhaque e creme"),
+                new Drink("Daikiri", "Licor de cacau, conhaque, creme, avelã, pimenta, chocolate e pinãta pinãtapinãta pinãta  "),
                 new Drink("Alice", "Blue curaçau e vodka"),
                 new Drink("Lagoa Azul","blue curaçau e vodka"),
                 new Drink("Lagoa Azul","blue curaçau e vodka"),
