@@ -2,10 +2,12 @@ package br.com.guimaraescosta.drinknow.activity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.Gravity;
@@ -75,11 +77,11 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (TextUtils.isEmpty(editText1.getText().toString())) {
                     // Set the Text to show in TextView
-                    text.setText(" Preencha o seu nome para continuar ");
+                    text.setText("Preencha o seu nome para continuar ");
                     toast.show();
 
                 } else if (TextUtils.isEmpty(editText2.getText().toString())) {
-                    text.setText(" Preencha o código do evento para continuar ");
+                    text.setText("Preencha o código do evento para continuar ");
                     toast.show();
 
                 } else {

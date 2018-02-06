@@ -23,7 +23,7 @@ public class DrinksActivity extends AppCompatActivity implements CompoundButton.
     ListView lista;
     List<Drink> drinks;
     AdapterTest adapterT;
-    //final ArrayList<String> selectedItems = new ArrayList<>();
+    ArrayList<String> selectedItems = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +51,10 @@ public class DrinksActivity extends AppCompatActivity implements CompoundButton.
         ViewGroup header = (ViewGroup)inflater.inflate(R.layout.header,lista,false);
         header.bringToFront();
         lista.addHeaderView(header);
+        ViewGroup footer = (ViewGroup)inflater.inflate(R.layout.footer,lista,false);
+        lista.addFooterView(footer);
+
+
 
 
 
@@ -89,10 +93,16 @@ public class DrinksActivity extends AppCompatActivity implements CompoundButton.
             Drink d = drinks.get(posCorrect);
             d.setSelected(isChecked);
 
-            Toast.makeText(
-                    this,
-                    "Clicked on item: " + d.getName() + ". State: is "
-                            + isChecked, Toast.LENGTH_SHORT).show();
+            if(selectedItems.contains(d.getName())){
+                selectedItems.remove(d.getName());
+            } else {
+                selectedItems.add(d.getName());
+            }
+
+//            Toast.makeText(
+//                    this,
+//                    "Clicked on item: " + d.getName() + ". State: is "
+//                            + isChecked, Toast.LENGTH_SHORT).show();
         }
 
 
